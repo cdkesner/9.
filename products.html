@@ -40,7 +40,7 @@
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Our Products</h1>
-    <p>Mission, Vission & Values</p>
+    <p>Best Audio Products on the Earth</p>
   </div>
 </div>
 
@@ -52,15 +52,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Springfield Audio Company</a>
+      <a class="navbar-brand"><strong>Springfield Audio Company</strong></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
         <li><a href="#">Our products</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="contactus.html">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
@@ -76,21 +75,21 @@
       <div class="panel panel-primary">
         <div class="panel-heading">DVD case</div>
         <div class="panel-body"><img src="images/Case.png" class="img-responsive" style="width:100%" alt="DVD"></div>
-        <div class="panel-footer"><input type="checkbox" id="dvd" value="8" /><label for="item1">Price $1.50</label></div>
+        <div class="panel-footer"><input type="checkbox" id="item1" value="1.5" /><label for="item1">Price $1.50</label></div>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="panel panel-danger">
         <div class="panel-heading">Cassette</div>
         <div class="panel-body"><img src="images/Cassette.png" class="img-responsive" style="width:100%" alt="Cassette"></div>
-        <div class="panel-footer"><input type="checkbox" id="cassette" value="8" /><label for="item1">Price $2.50</label></div>
+        <div class="panel-footer"><input type="checkbox" id="item2" value="2.5" /><label for="item2">Price $2.50</label></div>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="panel panel-success">
         <div class="panel-heading">Reel</div>
         <div class="panel-body"><img src="images/Reel.png" class="img-responsive" style="width:100%" alt="Reel"></div>
-        <div class="panel-footer"><input type="checkbox" id="reel" value="8" /><label for="item1">Price $2.50</label></div>
+        <div class="panel-footer"><input type="checkbox" id="item3" value="2.5" /><label for="item3">Price $2.50</label></div>
       </div>
     </div>
   </div>
@@ -100,35 +99,67 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-heading">Duplication Kit</div>
+        <div class="panel-body"><img src="images/DuplicationKit.png" class="img-responsive" style="width:100%" alt="Duplication Kit"></div>
+        <div class="panel-footer"><input type="checkbox" id="item4" value="40" /><label for="item4">Price $40.00</label></div>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-heading">Music Package</div>
+        <div class="panel-body"><img src="images/MusicPackage.png" class="img-responsive" style="width:100%" alt="Music Package"></div>
+        <div class="panel-footer"><input type="checkbox" id="item5" value="80" /><label for="item5">Price $80.00</label></div>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-heading">DVD on Spindle</div>
+        <div class="panel-body"><img src="images/Spindle.png" class="img-responsive" style="width:100%" alt="DVD on Spindle"></div>
+        <div class="panel-footer"><input type="checkbox" id="item6" value="25" /><label for="item6">Price $25.00</label></div>
       </div>
     </div>
   </div>
+        <input type="button" id="submit" value="Submit" class="btn btn-primary center-block"/>
 </div><br><br>
 
+
 <footer class="container-fluid text-center">
-  <p>Online Store Copyright</p>
   <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Sign Up</button>
+    <input type="email" class="form-control"  size="50" placeholder="Enter email" name="email" required>
+    <button type="button" class="btn btn-danger" id="email">Sign Up</button>
   </form>
+  <hr></hr>
+  <p>SAC (C) 2017</p>
 </footer>
 
+<script>
+ function calcTotal() {
+   var itemTotal = 0;
+   var item1 = document.getElementById('item1');
+   var item2 = document.getElementById('item2');
+   var item3 = document.getElementById('item3');
+   var item4 = document.getElementById('item4');
+   var item5 = document.getElementById('item5');
+
+   (item1.checked) ? (itemTotal += 1.5) : (itemTotal += 0);
+   (item2.checked) ? (itemTotal += 2.5) : (itemTotal += 0);
+   (item3.checked) ? (itemTotal += 2.5) : (itemTotal += 0);
+   (item4.checked) ? (itemTotal += 40) : (itemTotal += 0);
+   (item5.checked) ? (itemTotal += 80) : (itemTotal += 0);
+   (item5.checked) ? (itemTotal += 25) : (itemTotal += 0);
+
+   var salesTaxRate = 0.07;
+   itemTotal *= 100;
+   var orderTotal = (itemTotal + (itemTotal * salesTaxRate))/ 100;
+   alert("Your order total incl. tax is $" + orderTotal);
+ }
+   document.getElementById("submit").addEventListener("click", calcTotal, false);
+
+   function submitInfo() {
+     var email = document.getElementById("email");
+       alert("Thank you!");
+   }
+     document.getElementById("email").addEventListener("click", submitInfo, false);
+</script>
 </body>
 </html>
