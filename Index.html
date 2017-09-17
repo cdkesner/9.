@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <!--
-      Springfield Audio Company
-      Homepage 
-	  Authors: (Case Study 9) Curtis Kesner, Jason Stass, George Polivka, Chase Dickerson
-	  Date: 9-8-2017    
-
-      Filename: Homepage.htm
-   -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Springfield Audio COMPANY</title>
+    <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -26,7 +18,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script src="modernizr.custom.05819.js"></script>
+	  <script src="products.json"></script>
+    
   </head>
 	<body>
 		<div class="container">
@@ -41,19 +34,6 @@
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
-  <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Products
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li id="allProductsBtn"><a href="#">All Products</a></li>
-    <li id="audioCassettesBtn"><a href="#">Audio Cassettes</a></li>
-    <li id="digitalMediaBtn"><a href="#">Digital Media packaging</a></li>
-    <li role="separator" class="divider"></li>
-    <li id="contactUsBtn"><a href="#">Contact Us</a></li>
-  </ul>
-</div>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
@@ -76,39 +56,52 @@
 	<img src="images/CarouselNav.jpg" width="100%"> 
 </div>
 </div>
-		<div class="row">
-		<img src="images/PAGE1_CAT_IMG1_Cassettes.png">
+		<!--<div class="row">
+			<img src="images/PAGE1_CAT_IMG1_Cassettes.png">
 			<img src="images/PAGE1_CAT_IMG2_CassPkg.png">
 			<img src="images/PAGE1_CAT_IMG3_CassDupl.png">
 			<img src="images/PAGE1_CAT_IMG4_DigiMedia.png">
 			<img src="images/PAGE1_CAT_IMG6_DigiDupl.png">
 		</div>
 		<div class="row">
-		<img src="images/PAGE1_CAT_IMG1_Cassettes.png">
+			<img src="images/PAGE1_CAT_IMG1_Cassettes.png">
 			<img src="images/PAGE1_CAT_IMG2_CassPkg.png">
 			<img src="images/PAGE1_CAT_IMG3_CassDupl.png">
 			<img src="images/PAGE1_CAT_IMG4_DigiMedia.png">
 			<img src="images/PAGE1_CAT_IMG6_DigiDupl.png">
 		</div>
 			
+		</div> -->
+		<script>
+			// for (var i = 0; i<= products.length; i++)
+			//	 document.write ('<img src="'+products[i].image+'" >');
+			
+			/*for (var i = 0; i<= 1; i++){
+				document.write('<div class="row">'
+							  +'<img src=" ' + products[i].image + ' "> '
+							  +"</div>");*/
+			
+			
+			
+			</script>
+			<div class="row">
+				<script>
+					for (var i = 0; i<= 3; i++){
+						document.write ('<img src="'+products[i].image+'" >');
+					}
+				</script>
+			</div>
+			<div class="row">
+				<script>
+					for (var i = 4; i<= 7; i++){
+						document.write ('<img src="'+products[i].image+'" >');
+					}
+				</script>
+			</div>
 		</div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script>
-	  document.getElementById("contactUsBtn").addEventListener("click", function() {
-		alert("Contact Us Page is Coming Soon.  Please come back later!");
-		}, false);
-		document.getElementById("allProductsBtn").addEventListener("click", function() {
-		alert("All Products Page is Coming Soon.  Please come back later!");
-		}, false);
-		document.getElementById("audioCassettesBtn").addEventListener("click", function() {
-		alert("Audio Cassettes Page is Coming Soon.  Please come back later!");
-		}, false);
-		document.getElementById("digitalMediaBtn").addEventListener("click", function() {
-		alert("Digital Media Packaging Page is Coming Soon.  Please come back later!");
-		}, false);
-   </script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>
