@@ -133,33 +133,50 @@
 </footer>
 
 <script>
- function calcTotal() {
-   var itemTotal = 0;
-   var item1 = document.getElementById('item1');
-   var item2 = document.getElementById('item2');
-   var item3 = document.getElementById('item3');
-   var item4 = document.getElementById('item4');
-   var item5 = document.getElementById('item5');
+ // function calcTotal() {
+ //   var itemTotal = 0;
+ //   var item1 = document.getElementById('item1');
+ //   var item2 = document.getElementById('item2');
+ //   var item3 = document.getElementById('item3');
+ //   var item4 = document.getElementById('item4');
+ //   var item5 = document.getElementById('item5');
+ //
+ //   (item1.checked) ? (itemTotal += 1.5) : (itemTotal += 0);
+ //   (item2.checked) ? (itemTotal += 2.5) : (itemTotal += 0);
+ //   (item3.checked) ? (itemTotal += 2.5) : (itemTotal += 0);
+ //   (item4.checked) ? (itemTotal += 40) : (itemTotal += 0);
+ //   (item5.checked) ? (itemTotal += 80) : (itemTotal += 0);
+ //   (item5.checked) ? (itemTotal += 25) : (itemTotal += 0);
+ //
+ //   var salesTaxRate = 0.07;
+ //   itemTotal *= 100;
+ //   var orderTotal = (itemTotal + (itemTotal * salesTaxRate))/ 100;
+ //   alert("Your order total incl. tax is $" + orderTotal);
+ // }
+ //   document.getElementById("submit").addEventListener("click", calcTotal, false);
+ //
+ //   function submitInfo() {
+ //     var email = document.getElementById("email");
+ //       alert("Thank you!");
+ //   }
+ //     document.getElementById("email").addEventListener("click", submitInfo, false);
 
-   (item1.checked) ? (itemTotal += 1.5) : (itemTotal += 0);
-   (item2.checked) ? (itemTotal += 2.5) : (itemTotal += 0);
-   (item3.checked) ? (itemTotal += 2.5) : (itemTotal += 0);
-   (item4.checked) ? (itemTotal += 40) : (itemTotal += 0);
-   (item5.checked) ? (itemTotal += 80) : (itemTotal += 0);
-   (item5.checked) ? (itemTotal += 25) : (itemTotal += 0);
+<div class = "row"
+  <script>
+    for (var i = 0; i <= 3 ; i++){
+      document.write('<img src=" '+ imgp_[i].png +'" >');
+    }
+  </script>
 
-   var salesTaxRate = 0.07;
-   itemTotal *= 100;
-   var orderTotal = (itemTotal + (itemTotal * salesTaxRate))/ 100;
-   alert("Your order total incl. tax is $" + orderTotal);
- }
-   document.getElementById("submit").addEventListener("click", calcTotal, false);
+<div class = "row"
+  <script>
+    for (var i = 4; i <= 7 ; i++){
+      document.write('<img src=" '+ imgp_[i].png +'" >');
+    }
+  </script>
+  </div>
+</div>
 
-   function submitInfo() {
-     var email = document.getElementById("email");
-       alert("Thank you!");
-   }
-     document.getElementById("email").addEventListener("click", submitInfo, false);
 </script>
 </body>
 </html>
